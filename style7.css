@@ -1,3 +1,20 @@
+/* RESET */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --bg-light: #e0c0cb;
+  --brown-dark: #e39eaa;
+  --accent: #ba8a76;
+  --text-dark:#3b2b24;
+}
+
+body{
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
 /* === NAVBAR === */
 .navbar {
   background-color: var(--brown-dark);
@@ -17,14 +34,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* agar tetap rapi jika layar kecil */
 }
 
 .nav-logo {
   font-size: 24px;
   font-weight: 700;
   color: #fff;
-  margin: 0;
 }
 
 .nav-links {
@@ -44,92 +59,14 @@
   color: #c78eb1;
 }
 
-/* Responsif agar tetap rapi di layar kecil */
-@media (max-width: 700px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-}
-:root{
-  --bg-light: #f1e7b8;     /* coklat muda */
-  --pink-soft: #e192a4;   /* coklat tua */
-  --accent: #dcac98;
-  --text-dark:#3b2b24;
-}
-body {
-  background: var(--bg-light);
-}
-
-
-/* reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root{
-  --bg-light: #e0c0cb;      /* ← coklat muda lembut */
-  --brown-dark: #e39eaa;    /* coklat tua */
-  --accent: #ba8a76;
-  --text-dark:#3b2b24;
-}
-
-body{
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg-light);  /* warna latar coklat muda */
-  color: var(--text-dark);
-  line-height: 1.5;
-}
-
-/* header */
-.site-header{
-  background: transparent;
-  padding: 30px 0 10px;
-  position: relative;
-}
-.site-header .inner{
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.site-title{
-  font-size: 48px;
-  font-weight: 700;
-  color: var(--text-dark);
-}
-.main-nav a{
-  text-decoration: none;
-  color: #d28ca0;
-  margin-left: 20px;
-  font-size: 14px;
-}
-
-/* pita */
-.ribbon{
-  width: 60px;
-  height: 40px;
-  background: linear-gradient(#d18d7e,#7b5140);
-  position: absolute;
-  top: 78px;
-  left: 50%;
-  transform: translateX(-50%);
-  clip-path: polygon(0 0,100% 0,100% 70%,50% 100%,0 70%);
-}
-
-/* konten utama */
+/* MAIN WRAPPER */
 .site-main{
   width: 90%;
   max-width: 1100px;
   margin: 30px auto 80px;
 }
 
-/* hero section */
+/* HERO */
 .hero{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -137,27 +74,24 @@ body{
   align-items: stretch;
   margin-bottom: 28px;
 }
+
 .hero-left .hero-box{
   background: var(--brown-dark);
   color: #f1ecec;
   padding: 60px 40px;
 }
+
 .hero-box h2{
   font-size: 40px;
   line-height: 1.05;
   margin-bottom: 18px;
-  font-weight: 700;
 }
+
 .hero-box .meta-small{
-  color: rgba(255,255,255,0.85);
   font-size: 14px;
   margin-bottom: 16px;
 }
-.hero-box .dots{
-  color: rgba(164, 144, 144, 0.6);
-  font-size: 22px;
-  margin-top: 12px;
-}
+
 .hero-right img{
   width:100%;
   height:100%;
@@ -165,7 +99,7 @@ body{
   border-radius: 4px;
 }
 
-/* fitur */
+/* FEATURES */
 .features{
   display:grid;
   grid-template-columns: repeat(2,1fr);
@@ -178,34 +112,30 @@ body{
   color: #5f4040;
   align-items:center;
   padding: 14px;
+  border-radius: 4px;
 }
+
 .feat-thumb{
   width:84px;
   height:84px;
   object-fit:cover;
   margin-right: 14px;
 }
-.feat-body h3{
-  font-size:18px;
-  margin-bottom:8px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
+
 .meta-small{ color:hsl(0, 10%, 16%); font-size:13px; }
 
-/* isi + sidebar */
+/* CONTENT AREA */
 .content-area{
   display:grid;
   grid-template-columns: 2fr 1fr;
   gap: 30px;
 }
 
-/* kolom kiri */
+/* INTRO */
 .intro{
   display:flex;
   gap:18px;
   margin-bottom: 28px;
-  align-items:flex-start;
 }
 .intro-thumb{
   width:140px;
@@ -213,16 +143,9 @@ body{
   object-fit:cover;
   border-radius:4px;
 }
-.intro-text .lead{
-  color: var(--text-dark);
-  font-weight:700;
-  margin-bottom:8px;
-}
-.intro-text .desc{ color:#3f3b38; margin-bottom:8px; }
-.more{ display:inline-block; color:var(--accent); text-decoration:none; font-weight:600; }
 
-/* news */
-.section-title{ font-weight:700; margin:18px 0; color:var(--text-dark); }
+/* NEWS */
+.section-title{ font-weight:700; margin:18px 0; }
 .news-row{
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -235,15 +158,111 @@ body{
   border-radius:4px;
   margin-bottom:10px;
 }
-.news-item h5{ font-size:16px; color:var(--text-dark); margin-bottom:6px; text-transform:uppercase; }
-.read{ text-decoration:none; color:var(--accent); font-weight:600; }
 
-/* sidebar */
-.sidebar .box{
-  background: #432525;
-  padding: 18px;
-  margin-bottom: 14px;
-  border-left: 6px solid rgba(168, 109, 109, 0.06);
+/* FOOTER */
+.site-footer{
+  text-align:center;
+  padding:20px 0;
+  background: var(--brown-dark);
+  color:#fff;
 }
-.sidebar .box h4{ color:var(--text-dark); margin-bottom:8px; font-size:16px; }
-.more-small{
+
+
+
+/* ============================================================
+   =============== RESPONSIVE SECTION ==========================
+   ============================================================ */
+
+/* ========== TABLET ≤ 768px ========== */
+@media (max-width: 768px){
+
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr; /* jadi 1 kolom */
+  }
+
+  .features {
+    grid-template-columns: 1fr; /* 1 kolom */
+  }
+
+  .feature {
+    flex-direction: row;
+  }
+
+  .content-area {
+    grid-template-columns: 1fr; /* sidebar pindah bawah */
+  }
+
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-thumb {
+    margin: 0 auto;
+  }
+
+  .news-row {
+    grid-template-columns: 1fr; /* 1 kolom */
+  }
+}
+
+/* ========== MOBILE ≤ 480px ========== */
+@media (max-width: 480px){
+
+  .nav-logo {
+    font-size: 20px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .hero-box h2{
+    font-size: 28px;
+  }
+
+  .hero-box{
+    padding: 30px 20px;
+  }
+
+  .features{
+    gap: 12px;
+  }
+
+  .feature{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feat-thumb{
+    margin: 0 0 10px 0;
+    width: 100%;
+    height: 200px;
+    border-radius: 6px;
+  }
+
+  .intro-thumb{
+    width:100%;
+    height:200px;
+  }
+
+  .site-main{
+    width: 92%;
+  }
+
+  .news-item img{
+    height: 180px;
+  }
+}
